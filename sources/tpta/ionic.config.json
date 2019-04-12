@@ -1,5 +1,7 @@
 {
   "name": "tpta",
-  "integrations": {},
+  "integrations": {
+    "cordova": {}
+  },
   "type": "angular"
 }
