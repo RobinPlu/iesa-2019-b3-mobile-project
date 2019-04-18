@@ -16,6 +16,7 @@ export class Tab3Page {
     constructor(private tabName: TabNameService, private camera: Camera, private androidPermissions: AndroidPermissions, private _diagnostic: Diagnostic, private _platform: Platform) {}
 
     takePhoto(){
+    console.log('takePhoto');
 
         this.checkCameraPermissions().then(permissionOk => {
             if (permissionOk) {
@@ -47,6 +48,7 @@ export class Tab3Page {
     }
 
     checkCameraPermissions(): Promise<boolean> {
+        console.log('checkcmalmaféeflibzerhgbziuerj')
         return new Promise(resolve => {
             if (this.isiOS()) {
                 this._diagnostic.getCameraAuthorizationStatus().then(status => {

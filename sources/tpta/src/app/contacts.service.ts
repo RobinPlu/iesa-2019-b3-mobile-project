@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { Contacts, Contact, ContactField, ContactName } from '@ionic-native/contacts';
+import { Contacts } from '@ionic-native/contacts';
 
 @Injectable({
   providedIn: 'root'
