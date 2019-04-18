@@ -15,7 +15,7 @@ Apllication de paris entre pote
 
 Pour des groupes de potes / communauté qui souhaite donner de l'enjeu a des evenements de la vie de tout les jours. Notre produit de paris  en tout genre benefiecie d'un nombre incalculable de catégorie contrairement a la concurence qui ce spécifie en général dans un seul type de paris(ex paris sportif). Notre produit vous permettera de parier au sein de votre groupe d'ami ou au sein de la communauté de l'application(ex: karis vs booba / Evennement nationaux)
 
-##équipe4v4 parking
+## équipe4v4 parking
 
 1. Robin Plu ![](https://scontent-cdt1-1.xx.fbcdn.net/v/t1.0-1/p160x160/39040868_1861203097259454_2259088953007144960_n.jpg?_nc_cat=104&_nc_ht=scontent-cdt1-1.xx&oh=a0671e9c19191eceacb238a594b10daf&oe=5D3E2E29)
 
