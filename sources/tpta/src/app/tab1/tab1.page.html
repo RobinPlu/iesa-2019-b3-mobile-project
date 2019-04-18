@@ -6,3 +6,12 @@
   </ion-toolbar>
 </ion-header>
 
+<ion-content>
+  <ion-button (click)="getContacts()">Liste contacts</ion-button>
+<ion-list>
+  <ion-item *ngFor="let contact of contactsList">
+    {{contact._objectInstance.displayName}}
+  </ion-item>|
+</ion-list>
+</ion-content>
+

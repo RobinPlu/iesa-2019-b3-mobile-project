@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { TabNameService } from './../tab-name.service';
-import { Contacts, Contact, ContactField, ContactName } from '@ionic-native/contacts/ngx';
-
+import { ContactsService} from '../contacts.service';
+import { Contacts, Contact, ContactField, ContactName } from '@ionic-native/contacts';
 
 
 @Component({
@@ -10,6 +10,20 @@ import { Contacts, Contact, ContactField, ContactName } from '@ionic-native/cont
   styleUrls: ['tab1.page.scss']
 })
 export class Tab1Page {
-    constructor(private tabName: TabNameService) {
+    constructor(private tabName: TabNameService, private contactService: ContactsService, private contacts: Contacts ) {
     }
+
+    contactsList = [
+        {displayName: 'contact'}
+    ]
+
+    getContacts() {
+        console.log('getContacts')
+        this.contacts.find(['displayName', 'name', 'phoneNumbers'], {filter: "", multiple: true})
+            .then(data => {
+                console.log(data)
+                this.contactsList = data;
+            });
+    }
+
 }
