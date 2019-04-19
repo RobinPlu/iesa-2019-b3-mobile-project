@@ -2,3 +2,20 @@
   max-height: 35vh;
   overflow: hidden;
 }
+
+.itemEx {
+  width: 100%;
+  border: 0;
+  border-radius: 6px;
+  box-shadow: 0px 4px 8px 0px rgba(0, 0, 0, 0.2);
+  margin: 24px 0px;
+}
+
+.itemEx p {
+  padding: 24px 0;
+}
+ion-item {
+  --border-style: none;
+  --border-radius: 6px;
+  --pointer: click;
+}

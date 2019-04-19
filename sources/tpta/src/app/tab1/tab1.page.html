@@ -1,20 +1,21 @@
 <ion-header>
   <ion-toolbar>
     <ion-title>
-      {{this.tabName.tab1}}
+      {{ this.tabName.tab1 }}
     </ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content>
+<ion-content padding="16px">
   <ion-button (click)="getContacts()">Liste contacts</ion-button>
 
   <!--{{contactsList | json}}-->
 
-<ion-list *ngIf="contactsList">
-  <ion-item *ngFor="let contact of contactsList">
-    {{contact._objectInstance.name.givenName}}
-  </ion-item>|
-</ion-list>
+  <ion-list *ngIf="contactsList">
+    <ion-item *ngFor="let contact of contactsList">
+      {{ contact._objectInstance.name.givenName }} </ion-item
+    >|
+  </ion-list>
+  <ion-item class="itemEx" (click)="example()">Bet example</ion-item>
+  <ion-fab-button (click)="go()">+</ion-fab-button>
 </ion-content>
-

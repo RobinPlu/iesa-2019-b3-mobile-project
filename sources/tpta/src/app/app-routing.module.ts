@@ -2,7 +2,9 @@ import { NgModule } from '@angular/core';
 import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
 
 const routes: Routes = [
-  { path: '', loadChildren: './tabs/tabs.module#TabsPageModule' }
+  { path: '', loadChildren: './tabs/tabs.module#TabsPageModule' },
+  { path: 'bet', loadChildren: './bet/bet.module#BetPageModule' },
+  { path: 'betexample', loadChildren: './betexample/betexample.module#BetexamplePageModule' },
 ];
 @NgModule({
   imports: [
