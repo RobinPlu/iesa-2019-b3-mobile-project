@@ -1,5 +1,12 @@
 # T'as parlé t'assumes
 
+## Install projet:
+1. npm install -g cordova
+2. npm install -g ionic
+3. ionic serve (@angular/cli -> Yes)
+4. ionic cordova platform add Android/IOS
+5. ionic run Android/IOS
+
 ## pitch:
 
 Apllication de paris entre pote 
@@ -26,3 +33,5 @@ Pour des groupes de potes / communauté qui souhaite donner de l'enjeu a des eve
 4. Baptiste Pringuet ![Baptiste Photo](https://scontent-cdt1-1.xx.fbcdn.net/v/t1.0-1/p160x160/49666996_2426305540744085_6971033887673679872_n.jpg?_nc_cat=101&_nc_ht=scontent-cdt1-1.xx&oh=fa3b1e7a197dc904e7e5ba022f442686&oe=5D3519BA "Baptiste Photo")
 
 5. Stephen Ammerman ![Stephen Photo](https://scontent-cdt1-1.xx.fbcdn.net/v/t1.0-1/c15.0.160.160a/p160x160/20620910_1656894491021429_1167551096846824238_n.jpg?_nc_cat=106&_nc_ht=scontent-cdt1-1.xx&oh=8271357cc51a1835d6f3df4431c8c660&oe=5D43BAD5 "Stephen Photo")
+
+

@@ -4,6 +4,8 @@ import { ContactsService } from "../contacts.service";
 import { Contacts } from "@ionic-native/contacts";
 import { Router } from "../../../node_modules/@angular/router";
 
+// import { Contacts, Contact, ContactField, ContactName } from '@ionic-native/contacts/ngx';
+
 @Component({
   selector: "app-tab1",
   templateUrl: "tab1.page.html",
@@ -23,7 +25,7 @@ export class Tab1Page {
     this.router.navigate(["betexample"]);
   }
 
-  contactsList = [{ displayName: "contact" }];
+  contactsList: any;
 
   getContacts() {
     console.log("getContacts");
