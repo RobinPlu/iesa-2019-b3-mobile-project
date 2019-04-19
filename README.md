@@ -5,7 +5,7 @@
 2. npm install -g ionic
 3. ionic serve (@angular/cli -> Yes)
 4. ionic cordova platform add Android/IOS
-5. ionic run Android/IOS
+5. ionic cordova run Android/IOS -l
 
 ## pitch:
 
