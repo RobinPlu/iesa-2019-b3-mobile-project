@@ -1,17 +1,18 @@
 <ion-header>
   <ion-toolbar>
     <ion-title>
-      {{this.tabName.tab1}}
+      {{ this.tabName.tab1 }}
     </ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content>
+<ion-content padding="16px">
   <ion-button (click)="getContacts()">Liste contacts</ion-button>
-<ion-list>
-  <ion-item *ngFor="let contact of contactsList">
-    {{contact._objectInstance.displayName}}
-  </ion-item>|
-</ion-list>
+  <ion-list>
+    <ion-item *ngFor="let contact of contactsList">
+      {{ contact._objectInstance.displayName }} </ion-item
+    >|
+  </ion-list>
+  <ion-item class="itemEx" (click)="example()">Bet example</ion-item>
+  <ion-fab-button (click)="go()">+</ion-fab-button>
 </ion-content>
-
