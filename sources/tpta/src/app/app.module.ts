@@ -14,6 +14,8 @@ import { Camera, CameraOptions } from '@ionic-native/camera/ngx';
 import { Diagnostic } from '@ionic-native/diagnostic/ngx';
 import { AndroidPermissions } from '@ionic-native/android-permissions/ngx';
 
+import { Geolocation } from '@ionic-native/geolocation/ngx';
+
 @NgModule({
   declarations: [AppComponent],
   entryComponents: [],
@@ -23,6 +25,7 @@ import { AndroidPermissions } from '@ionic-native/android-permissions/ngx';
     SplashScreen,
       Camera,
       Contacts,
+      Geolocation,
       Diagnostic,
       AndroidPermissions,
     { provide: RouteReuseStrategy, useClass: IonicRouteStrategy }
