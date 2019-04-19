@@ -15,71 +15,104 @@ export class Tab3Page {
 
     constructor(private tabName: TabNameService, private camera: Camera, private androidPermissions: AndroidPermissions, private _diagnostic: Diagnostic, private _platform: Platform) {}
 
-    takePhoto(){
+    takePhoto() {
     console.log('takePhoto');
 
-        this.checkCameraPermissions().then(permissionOk => {
-            if (permissionOk) {
+        if (this.isiOS()) {
+            this._diagnostic.getCameraAuthorizationStatus().then(status => {
+                if (status == this._diagnostic.permissionStatus.GRANTED) {
 
+                    const options: CameraOptions = {
+                        quality: 35,
+                        destinationType: this.camera.DestinationType.DATA_URL,
+                        encodingType: this.camera.EncodingType.JPEG,
+                        mediaType: this.camera.MediaType.PICTURE,
+                        sourceType: this.camera.PictureSourceType.CAMERA,
+                        allowEdit: true
+                    };
+
+                    this.camera.getPicture(options).then((imageData) => {
+                        console.log('PHOTO OK : ', imageData)
+
+
+                        this.itemToUpload = 'data:image/jpeg;base64,' + imageData;
+
+
+                    }, (err) => {
+                        // Handle error
+                        console.log('err', err)
+                    });
+                }
+
+                else if (status == this._diagnostic.permissionStatus.NOT_REQUESTED || status.toLowerCase() == 'not_determined') {
+                    this._diagnostic.requestCameraAuthorization().then(authorisation => {
+
+                        const options: CameraOptions = {
+                            quality: 35,
+                            destinationType: this.camera.DestinationType.DATA_URL,
+                            encodingType: this.camera.EncodingType.JPEG,
+                            mediaType: this.camera.MediaType.PICTURE,
+                            sourceType: this.camera.PictureSourceType.CAMERA,
+                            allowEdit: true
+                        };
+
+                        this.camera.getPicture(options).then((imageData) => {
+                            console.log('PHOTO OK : ', imageData)
+
+
+                            this.itemToUpload = 'data:image/jpeg;base64,' + imageData;
+
+
+                        }, (err) => {
+                            // Handle error
+                            console.log('err', err)
+                        });
+                    });
+                }
+            });
+        }
+        else if (this.isAndroid()) {
+            var that = this;
+            console.log('dans is android')
+            // this.androidPermissions.requestPermission(this.androidPermissions.PERMISSION.CAMERA).then(result => {
+    console.log('dans req perm')
                 const options: CameraOptions = {
                     quality: 35,
                     destinationType: this.camera.DestinationType.DATA_URL,
                     encodingType: this.camera.EncodingType.JPEG,
                     mediaType: this.camera.MediaType.PICTURE,
-                    sourceType: this.camera.PictureSourceType.CAMERA,
-                    allowEdit: true
+                    sourceType: this.camera.PictureSourceType.PHOTOLIBRARY,
+                    // sourceType: this.camera.PictureSourceType.CAMERA,
+                    allowEdit: false
                 };
+            console.log('dans req perm', 2, options)
 
                 this.camera.getPicture(options).then((imageData) => {
                     console.log('PHOTO OK : ', imageData)
 
-                    // passage page avec photo
 
                     this.itemToUpload = 'data:image/jpeg;base64,' + imageData;
 
 
                 }, (err) => {
                     // Handle error
-                    console.log(err)
+                    console.log('err', err)
                 });
-            }
-        });
+            // }, err => {
+            //     console.log(err);
+            // });
+        }
+        else {
+            console.log('pas ios ni android')
+        }
+
+
+
+
 
     }
 
-    checkCameraPermissions(): Promise<boolean> {
-        console.log('checkcmalmaféeflibzerhgbziuerj')
-        return new Promise(resolve => {
-            if (this.isiOS()) {
-                this._diagnostic.getCameraAuthorizationStatus().then(status => {
-                    if (status == this._diagnostic.permissionStatus.GRANTED) {
-                        resolve(true);
-                    }
-                    else if (status == this._diagnostic.permissionStatus.DENIED) {
-                        this._diagnostic.requestCameraAuthorization().then(authorisation => {
-                            resolve(authorisation == this._diagnostic.permissionStatus.GRANTED);
-                        }).catch(() => {
-                            resolve(false);
-                            // si bug, virer tout le else sauf resolve false
-                        })
-                    }
-                    else if (status == this._diagnostic.permissionStatus.NOT_REQUESTED || status.toLowerCase() == 'not_determined') {
-                        this._diagnostic.requestCameraAuthorization().then(authorisation => {
-                            resolve(authorisation == this._diagnostic.permissionStatus.GRANTED);
-                        });
-                    }
-                });
-            }
-            else if (this.isAndroid()) {
-                this.androidPermissions.requestPermission(this.androidPermissions.PERMISSION.CAMERA).then(result => {
-                    resolve(result);
-                }, err => {
-                    resolve(false);
-                    console.log(err);
-                });
-            }
-        });
-    }
+
 
 
     isAndroid() {

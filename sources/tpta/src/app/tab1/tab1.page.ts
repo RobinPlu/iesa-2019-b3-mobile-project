@@ -2,6 +2,8 @@ import { Component } from '@angular/core';
 import { TabNameService } from './../tab-name.service';
 import { ContactsService} from '../contacts.service';
 import { Contacts } from '@ionic-native/contacts';
+// import { Contacts, Contact, ContactField, ContactName } from '@ionic-native/contacts/ngx';
+
 
 
 @Component({
@@ -13,9 +15,7 @@ export class Tab1Page {
     constructor(private tabName: TabNameService, private contactService: ContactsService, private contacts: Contacts ) {
     }
 
-    contactsList = [
-        {displayName: 'contact'}
-    ]
+    contactsList: any;
 
     getContacts() {
         console.log('getContacts')

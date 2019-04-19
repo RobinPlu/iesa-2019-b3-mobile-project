@@ -8,9 +8,12 @@
 
 <ion-content>
   <ion-button (click)="getContacts()">Liste contacts</ion-button>
-<ion-list>
+
+  <!--{{contactsList | json}}-->
+
+<ion-list *ngIf="contactsList">
   <ion-item *ngFor="let contact of contactsList">
-    {{contact._objectInstance.displayName}}
+    {{contact._objectInstance.name.givenName}}
   </ion-item>|
 </ion-list>
 </ion-content>
