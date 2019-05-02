@@ -32,12 +32,9 @@ export class BetexamplePage implements OnInit {
   }
 
   captureAudio() {
-    this.mediaCapture.captureAudio().then(
-      res => {
-        this.storeMediaFiles(res);
-      }
-      
-    );
+    this.mediaCapture.captureAudio().then(res => {
+      this.storeMediaFiles(res);
+    });
   }
 
   play(myFile) {
