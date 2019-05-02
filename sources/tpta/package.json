@@ -49,12 +49,9 @@
     "cordova-plugin-file": "6.0.1",
     "cordova-plugin-file-transfer": "1.7.1",
     "cordova-plugin-geolocation": "4.0.1",
-<<<<<<< HEAD
     "cordova-plugin-ios-microphone-permissions": "1.0.0",
-=======
     "cordova-plugin-google-analytics": "1.8.6",
     "cordova-plugin-local-notification": "0.9.0-beta.2",
->>>>>>> e4cbaf1a19a30d4785aa3a6e5a31806878b6ace5
     "cordova-plugin-media": "5.0.2",
     "cordova-plugin-media-capture": "3.0.2",
     "cordova-plugin-speechrecognition": "1.2.0",
@@ -127,15 +124,12 @@
       "cordova-plugin-media-capture": {},
       "cordova-sqlite-storage": {},
       "cordova-plugin-geolocation": {},
-<<<<<<< HEAD
-      "cordova-plugin-ios-microphone-permissions": {}
-=======
+      "cordova-plugin-ios-microphone-permissions": {},
       "cordova-plugin-badge": {},
       "cordova-plugin-local-notification": {},
       "cordova-plugin-google-analytics": {
         "GMS_VERSION": "11.0.1"
       }
->>>>>>> e4cbaf1a19a30d4785aa3a6e5a31806878b6ace5
     },
     "platforms": [
       "android",
