@@ -18,6 +18,8 @@ import { File } from "@ionic-native/file/ngx";
 import { MediaCapture } from "@ionic-native/media-capture/ngx";
 import { IonicStorageModule } from "@ionic/storage";
 
+import { Geolocation } from '@ionic-native/geolocation/ngx';
+
 @NgModule({
   declarations: [AppComponent],
   entryComponents: [],
@@ -38,7 +40,8 @@ import { IonicStorageModule } from "@ionic/storage";
     { provide: RouteReuseStrategy, useClass: IonicRouteStrategy },
     MediaCapture,
     Media,
-    File
+    File,
+    Geolocation,
   ],
   bootstrap: [AppComponent]
 })
