@@ -6,5 +6,20 @@
 </ion-header>
 
 <ion-content>
-  
+  <ion-row>
+    <ion-col>
+      <button ion-button full (click)="captureAudio()">Capture Audio</button>
+    </ion-col>
+  </ion-row>
+  <ion-list>
+    <ion-item
+      *ngFor="let file of mediaFiles"
+      tappable
+      (click)="play(file)"
+      text-wrap
+    >
+      {{ file.name }}
+      <p>{{ file.size / 1000 / 1000 | number }} MB</p>
+    </ion-item>
+  </ion-list>
 </ion-content>

@@ -7,6 +7,7 @@ import { IonicModule } from "@ionic/angular";
 
 import { BetPage } from "./bet.page";
 
+
 const routes: Routes = [
   {
     path: "",
