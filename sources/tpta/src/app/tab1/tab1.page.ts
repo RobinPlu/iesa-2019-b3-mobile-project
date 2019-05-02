@@ -3,6 +3,8 @@ import { TabNameService } from "./../tab-name.service";
 import { ContactsService } from "../contacts.service";
 import { Contacts } from "@ionic-native/contacts";
 import { Router } from "../../../node_modules/@angular/router";
+import { NotificationService} from '../notification.service';
+import { AnalyticsService } from'../analytics.service';
 
 // import { Contacts, Contact, ContactField, ContactName } from '@ionic-native/contacts/ngx';
 
@@ -16,7 +18,9 @@ export class Tab1Page {
     private tabName: TabNameService,
     private contactService: ContactsService,
     private contacts: Contacts,
-    private router: Router
+    private router: Router,
+    private ana: AnalyticsService,
+    public notif: NotificationService
   ) {}
   go() {
     this.router.navigate(["bet"]);
@@ -26,6 +30,13 @@ export class Tab1Page {
   }
 
   contactsList: any;
+
+  fonctionNotif(){
+    this.notif.setnotif()
+  }
+    fonctionAnalitycs(){
+    this.ana.analytic()
+  }
 
   getContacts() {
     console.log("getContacts");
