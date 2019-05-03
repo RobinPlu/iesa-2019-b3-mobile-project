@@ -5,6 +5,7 @@ const routes: Routes = [
   { path: '', loadChildren: './tabs/tabs.module#TabsPageModule' },
   { path: 'bet', loadChildren: './bet/bet.module#BetPageModule' },
   { path: 'betexample', loadChildren: './betexample/betexample.module#BetexamplePageModule' },
+  { path: 'betfake', loadChildren: './betfake/betfake.module#BetfakePageModule' },
 ];
 @NgModule({
   imports: [

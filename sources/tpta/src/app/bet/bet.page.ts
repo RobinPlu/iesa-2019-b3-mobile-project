@@ -1,5 +1,5 @@
 import { Component, OnInit } from "@angular/core";
-
+import { Router } from "../../../node_modules/@angular/router";
 
 @Component({
   selector: "app-bet",
@@ -7,7 +7,11 @@ import { Component, OnInit } from "@angular/core";
   styleUrls: ["./bet.page.scss"]
 })
 export class BetPage implements OnInit {
-  constructor() {}
+  constructor(private router: Router) {}
+
+  go() {
+    this.router.navigate(["betfake"]);
+  }
 
   ngOnInit() {}
 }
