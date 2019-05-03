@@ -18,9 +18,10 @@ import { File } from "@ionic-native/file/ngx";
 import { MediaCapture } from "@ionic-native/media-capture/ngx";
 import { IonicStorageModule } from "@ionic/storage";
 
-import { Geolocation } from "@ionic-native/geolocation/ngx";
-import { LocalNotifications } from "@ionic-native/local-notifications/ngx";
-import { GoogleAnalytics } from "@ionic-native/google-analytics/ngx";
+import { Geolocation } from '@ionic-native/geolocation/ngx';
+import { LocalNotifications } from '@ionic-native/local-notifications/ngx';
+import { GoogleAnalytics} from '@ionic-native/google-analytics/ngx';
+import {Badge} from '@ionic-native/badge/ngx';
 
 @NgModule({
   declarations: [AppComponent],
@@ -45,7 +46,8 @@ import { GoogleAnalytics } from "@ionic-native/google-analytics/ngx";
     File,
     Geolocation,
     LocalNotifications,
-    GoogleAnalytics
+    GoogleAnalytics,
+    Badge
   ],
   bootstrap: [AppComponent]
 })
