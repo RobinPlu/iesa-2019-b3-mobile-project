@@ -5,6 +5,7 @@ import { Contacts } from "@ionic-native/contacts";
 import { Router } from "../../../node_modules/@angular/router";
 import { NotificationService} from '../notification.service';
 import { AnalyticsService } from'../analytics.service';
+import {Badge} from '@ionic-native/badge/ngx';
 
 // import { Contacts, Contact, ContactField, ContactName } from '@ionic-native/contacts/ngx';
 
@@ -20,8 +21,11 @@ export class Tab1Page {
     private contacts: Contacts,
     private router: Router,
     private ana: AnalyticsService,
-    public notif: NotificationService
-  ) {}
+    public notif: NotificationService,
+    public badge: Badge
+  ) {
+      this.clearbadge();
+  }
   go() {
     this.router.navigate(["bet"]);
   }
@@ -29,6 +33,10 @@ export class Tab1Page {
     this.router.navigate(["betexample"]);
   }
 
+clearbadge(){
+    this.badge.set(0);
+    this.badge.clear();
+}
   contactsList: any;
 
   fonctionNotif(){

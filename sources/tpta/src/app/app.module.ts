@@ -21,7 +21,9 @@ import { IonicStorageModule } from "@ionic/storage";
 import { Geolocation } from '@ionic-native/geolocation/ngx';
 import { LocalNotifications } from '@ionic-native/local-notifications/ngx';
 import { GoogleAnalytics} from '@ionic-native/google-analytics/ngx';
-import {Badge} from '@ionic-native/badge/ngx';
+import { Badge } from '@ionic-native/badge/ngx';
+import { ScreenOrientation } from '@ionic-native/screen-orientation/ngx';
+
 
 @NgModule({
   declarations: [AppComponent],
@@ -48,6 +50,7 @@ import {Badge} from '@ionic-native/badge/ngx';
     LocalNotifications,
     GoogleAnalytics,
     Badge,
+      ScreenOrientation,
   ],
   bootstrap: [AppComponent]
 })
