@@ -32,6 +32,9 @@ export class Tab1Page {
   example() {
     this.router.navigate(["betexample"]);
   }
+  analy(){
+    this.ana.analytic();
+  }
 
 clearbadge(){
     this.badge.set(0);

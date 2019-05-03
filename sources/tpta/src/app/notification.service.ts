@@ -14,7 +14,7 @@ setnotif(){
 // Schedule a single notification
     this.localNotifications.schedule({
         id: 1,
-        text: 'Vous avez bien ajouté cet excrément',
+        text: 'Vous avez bien ajouté ce paris',
     });
 }
 }
