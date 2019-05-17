@@ -21,6 +21,7 @@
     "@angular/platform-browser-dynamic": "^7.2.2",
     "@angular/router": "^7.2.2",
     "@ionic-native/android-permissions": "^5.4.0",
+    "@ionic-native/app-preferences": "^5.6.0",
     "@ionic-native/badge": "^5.5.1",
     "@ionic-native/camera": "^5.4.0",
     "@ionic-native/contacts": "^5.4.0",
@@ -29,6 +30,7 @@
     "@ionic-native/file": "^5.4.0",
     "@ionic-native/file-transfer": "^5.4.0",
     "@ionic-native/geolocation": "^5.4.0",
+    "@ionic-native/globalization": "^5.6.0",
     "@ionic-native/google-analytics": "^5.5.1",
     "@ionic-native/local-notifications": "^5.5.1",
     "@ionic-native/media": "^5.4.0",
@@ -44,12 +46,14 @@
     "cordova-browser": "6.0.0",
     "cordova-ios": "5.0.1",
     "cordova-plugin-android-permissions": "1.0.0",
+    "cordova-plugin-app-preferences": "0.99.3",
     "cordova-plugin-badge": "0.8.8",
     "cordova-plugin-camera": "4.0.3",
     "cordova-plugin-contacts": "git+https://github.com/apache/cordova-plugin-contacts.git",
     "cordova-plugin-file": "6.0.1",
     "cordova-plugin-file-transfer": "1.7.1",
     "cordova-plugin-geolocation": "4.0.1",
+    "cordova-plugin-globalization": "1.11.0",
     "cordova-plugin-google-analytics": "1.8.6",
     "cordova-plugin-ios-microphone-permissions": "1.0.0",
     "cordova-plugin-local-notification": "0.9.0-beta.2",
@@ -133,7 +137,8 @@
       "cordova-plugin-google-analytics": {
         "GMS_VERSION": "11.0.1"
       },
-      "cordova-plugin-screen-orientation": {}
+      "cordova-plugin-screen-orientation": {},
+      "cordova-plugin-globalization": {}
     },
     "platforms": [
       "android",
