@@ -117,4 +117,16 @@ export class Tab3Page {
   isiOS() {
     return this._platform.is("ios");
   }
+  xp: number = 0;
+  level: number = 1;
+  updateLevel() {
+    if (this.xp > 40) {
+      this.level += Math.floor(this.xp / 40);
+      this.xp = this.xp % 40;
+    }
+  }
+  getxp() {
+    this.xp += 10;
+    this.updateLevel();
+  }
 }

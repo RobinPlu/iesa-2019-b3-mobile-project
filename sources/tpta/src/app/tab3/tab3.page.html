@@ -1,12 +1,17 @@
 <ion-header>
   <ion-toolbar>
     <ion-title>
-      {{this.tabName.tab3}}
+      {{ this.tabName.tab3 }}
     </ion-title>
   </ion-toolbar>
 </ion-header>
 <ion-content>
   <ion-button (click)="takePhoto()">Prendre une photo </ion-button>
 
-  <img src="{{itemToUpload}}">
+  <img src="{{ itemToUpload }}" />
+
+  <ion-button (click)="getxp()">get xp</ion-button>
+  <ion-item>Level : {{ level }}</ion-item>
+  <ion-item>xp : {{ xp }}</ion-item>
 </ion-content>
+
