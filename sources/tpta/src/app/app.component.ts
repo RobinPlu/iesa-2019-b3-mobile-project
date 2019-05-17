@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 
+import { MenuController } from '@ionic/angular';
 import { Platform } from '@ionic/angular';
 import { SplashScreen } from '@ionic-native/splash-screen/ngx';
 import { StatusBar } from '@ionic-native/status-bar/ngx';
@@ -17,11 +18,24 @@ export class AppComponent {
     private splashScreen: SplashScreen,
     private statusBar: StatusBar,
     private badge: Badge,
-    private screenOrientation: ScreenOrientation
+    private screenOrientation: ScreenOrientation,
+    private menu: MenuController
   ) {
     this.initializeApp();
   }
+    openFirst() {
+        this.menu.enable(true, 'first');
+        this.menu.open('first');
+    }
 
+    openEnd() {
+        this.menu.open('end');
+    }
+
+    openCustom() {
+        this.menu.enable(true, 'custom');
+        this.menu.open('custom');
+    }
   initializeApp() {
     this.platform.ready().then(() => {
       this.statusBar.styleDefault();
