@@ -1,0 +1,7 @@
+{
+  "TITLE": "Notification en",
+  "TITLE_2": "Hello {{value}}",
+  "description": "Ooohh .... did you just translate this text ?",
+  "data": {"name": "My name is {{name_value}}"}
+  "notif": {"name": "You have a notification"}
+}
