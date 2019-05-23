@@ -23,6 +23,7 @@ import { LocalNotifications } from "@ionic-native/local-notifications/ngx";
 import { GoogleAnalytics } from "@ionic-native/google-analytics/ngx";
 import { Badge } from "@ionic-native/badge/ngx";
 import { ScreenOrientation } from "@ionic-native/screen-orientation/ngx";
+import { Calendar } from '@ionic-native/calendar/ngx';
 
 @NgModule({
   declarations: [AppComponent],
@@ -49,7 +50,8 @@ import { ScreenOrientation } from "@ionic-native/screen-orientation/ngx";
     LocalNotifications,
     GoogleAnalytics,
     Badge,
-    ScreenOrientation
+    ScreenOrientation,
+    Calendar
   ],
   bootstrap: [AppComponent]
 })

@@ -7,7 +7,10 @@ import { Router } from "../../../node_modules/@angular/router";
   styleUrls: ["./bet.page.scss"]
 })
 export class BetPage implements OnInit {
-  constructor(private router: Router) {}
+  calendars = [];
+  constructor(
+    private router: Router,
+  ) {  }
 
   go() {
     this.router.navigate(["betfake"]);

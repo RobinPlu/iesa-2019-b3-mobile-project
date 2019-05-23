@@ -8,7 +8,7 @@
 <ion-content>
   <ion-title>102€ sur la table</ion-title>
   <div padding>
-    <p>Ils veulent se battre en public</p>
+    <p>bataille</p>
   </div>
   <div padding>
     <p>Joueur 1 :</p>
@@ -17,5 +17,37 @@
   <div padding>
     <p>Joueur 2 :</p>
     <h3>Cédric</h3>
+  </div>
+  <ion-row padding class="audio">
+    <ion-col>
+      <ion-button (click)="captureAudio()">Capture Audio</ion-button>
+    </ion-col>
+  </ion-row>
+
+  <ion-list>
+    <ion-item
+      *ngFor="let file of mediaFiles"
+      tappable
+      (click)="play(file)"
+      text-wrap
+    >
+      {{ file.name }}
+      <p>{{ file.size / 1000 / 1000 | number }} MB</p>
+    </ion-item>
+  </ion-list>
+
+  <ion-row padding>
+    <ion-button (click)="locate()">Locate</ion-button>
+
+    <!--{{locate | json}}-->
+
+    <!--<ion-list *ngIf="geoloc">-->
+    <!--<ion-item *ngFor="let contact of geoloc">-->
+    <!--{{coordonnee.geoloc}}-->
+    <!--</ion-item>|-->
+    <!--</ion-list>-->
+  </ion-row>
+  <div [style.opacity]="opacity" id="map" style="width:100%; height:100%;">
+    <ion-button (click)="close()">Locate</ion-button>
   </div>
 </ion-content>

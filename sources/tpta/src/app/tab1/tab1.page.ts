@@ -30,7 +30,7 @@ export class Tab1Page {
     this.router.navigate(["bet"]);
   }
   example() {
-    this.router.navigate(["betexample"]);
+    this.router.navigate(["betfake"]);
   }
   analy(){
     this.ana.analytic();
