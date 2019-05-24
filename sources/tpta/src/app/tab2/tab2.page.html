@@ -2,12 +2,17 @@
   <ion-toolbar color="primary">
     <ion-title>
       {{ this.tabName.tab1 }}
-
     </ion-title>
-    <ion-menu-button (click)="openEnd()" class="button button-icon button-clear ion-navicon"></ion-menu-button>
+    <ion-menu-button
+      (click)="openEnd()"
+      class="button button-icon button-clear ion-navicon"
+      padding
+    ></ion-menu-button>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
-    <ion-item class="itemEx" (click)="example()">Vous avez créer un pari !</ion-item>
+  <ion-item class="itemEx" (click)="example()"
+    >Vous avez créer un pari !</ion-item
+  >
 </ion-content>
