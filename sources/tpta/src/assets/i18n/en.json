@@ -1,7 +1,8 @@
 {
-  "TITLE": "Notification en",
+  "TITLE": "my bet",
   "TITLE_2": "Hello {{value}}",
   "description": "Ooohh .... did you just translate this text ?",
   "data": {"name": "My name is {{name_value}}"},
+  "pari"          :"bet",
   "notif": {"name": "You have a notification"}
 }

@@ -18,7 +18,7 @@
   <!--<ion-select-option value="fr">French</ion-select-option>-->
   <!--</ion-select>-->
   <!--</ion-item>-->
-  <ion-item class="itemEx" (click)="example()">Bet example</ion-item>
+  <ion-item class="itemEx" (click)="example()">{{ title }}</ion-item>
   <ion-list *ngIf="contactsList">
     <ion-item *ngFor="let contact of contactsList">
       {{ contact._objectInstance.name.givenName }} </ion-item

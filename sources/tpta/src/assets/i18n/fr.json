@@ -1,7 +1,8 @@
 {
-  "TITLE"         : "notification fr",
+  "TITLE"         : "mes paris",
   "TITLE_2"       : "Bonjour {{value}}",
   "description"   : "Ooohh .... vous venez de traduire ce texte?",
   "data"          :{"name": "je m'appelle {{name_value}}"},
+  "pari"          :"mes paris",
   "notif"          :{"name": "vous avez une notification"}
 }
