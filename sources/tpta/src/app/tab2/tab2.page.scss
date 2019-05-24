@@ -2,3 +2,10 @@
 ion-toolbar ion-title {
   text-align: center;
 }
+ion-toolbar ion-menu-button{
+  position: absolute;
+  right: 15px;
+  top: 9px;
+  width: 27px;
+  height: 27px;
+}

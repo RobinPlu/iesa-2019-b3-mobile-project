@@ -36,10 +36,16 @@ export class AppComponent {
         this.menu.enable(true, 'custom');
         this.menu.open('custom');
     }
+
+
+
   initializeApp() {
     this.platform.ready().then(() => {
       this.statusBar.styleDefault();
       this.splashScreen.hide();
+
+        this.badge.set(0);
+        this.badge.clear();
         this.screenOrientation.lock(this.screenOrientation.ORIENTATIONS.PORTRAIT);
 
     });

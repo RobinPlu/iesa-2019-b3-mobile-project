@@ -3,10 +3,12 @@ import { TabNameService } from "./../tab-name.service";
 import { ContactsService } from "../contacts.service";
 import { Contacts } from "@ionic-native/contacts";
 import { Router } from "../../../node_modules/@angular/router";
-import { NotificationService } from "../notification.service";
-import { AnalyticsService } from "../analytics.service";
-import { Badge } from "@ionic-native/badge/ngx";
-import { TranslateService } from "@ngx-translate/core";
+import { NotificationService} from '../notification.service';
+import { AnalyticsService } from'../analytics.service';
+import {Badge} from '@ionic-native/badge/ngx';
+import { TranslateService } from '@ngx-translate/core';
+import { MenuController } from '@ionic/angular';
+
 
 // import { Contacts, Contact, ContactField, ContactName } from '@ionic-native/contacts/ngx';
 
@@ -16,10 +18,11 @@ import { TranslateService } from "@ngx-translate/core";
   styleUrls: ["tab1.page.scss"]
 })
 export class Tab1Page {
-  public title: string;
-  public language: string;
-  public notiftf: boolean;
-  public isToggled: boolean = true;
+    public title: string;
+    public language: string;
+    public notiftf: boolean ;
+    public isToggled: boolean =true;
+    public menut: boolean =true;
 
   public langdefault: string;
   constructor(
@@ -30,7 +33,8 @@ export class Tab1Page {
     private ana: AnalyticsService,
     public notif: NotificationService,
     public badge: Badge,
-    private _translate: TranslateService
+    private _translate: TranslateService,
+    private menu: MenuController
   ) {
     this.clearbadge();
   }
@@ -123,14 +127,16 @@ export class Tab1Page {
     // Set the default language for translation strings, and the current language.
     this._translate.setDefaultLang("en");
 
-    if (this._translate.getBrowserLang() !== undefined) {
-      this.language = this._translate.getBrowserLang();
-      console.log("browser language is", this._translate.getBrowserLang());
-    } else {
-      // Set your language here
-      this.language = "en";
+        this._translateLanguage();
     }
 
-    this._translateLanguage();
-  }
+    openEnd() {
+        if(this.menut === true){
+            this.menu.open('end');
+            this.menut=false;
+        }else{
+            this.menu.close('end')
+            this.menut=true;
+        }
+    }
 }

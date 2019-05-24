@@ -1,51 +1,64 @@
 <ion-app>
-  <ion-menu side="start" menuId="first">
-    <ion-header>
-      <ion-toolbar color="primary">
-        <ion-title>Start Menu</ion-title>
-      </ion-toolbar>
-    </ion-header>
-    <ion-content>
-      <ion-list>
-        <ion-item>Menu Item</ion-item>
-        <ion-item>Menu Item</ion-item>
-        <ion-item>Menu Item</ion-item>
-        <ion-item>Menu Item</ion-item>
-        <ion-item>Menu Item</ion-item>
-      </ion-list>
-    </ion-content>
-  </ion-menu>
+  <!--<ion-menu side="start" menuId="first">-->
+    <!--<ion-header>-->
+      <!--<ion-toolbar color="primary">-->
+        <!--<ion-title>Start Menu</ion-title>-->
+      <!--</ion-toolbar>-->
+    <!--</ion-header>-->
+    <!--<ion-content>-->
+      <!--<ion-list>-->
+        <!--<ion-item>Menu Item</ion-item>-->
+        <!--<ion-item>Menu Item</ion-item>-->
+        <!--<ion-item>Menu Item</ion-item>-->
+        <!--<ion-item>Menu Item</ion-item>-->
+        <!--<ion-item>Menu Item</ion-item>-->
+      <!--</ion-list>-->
+    <!--</ion-content>-->
+  <!--</ion-menu>-->
 
-  <ion-menu side="start" menuId="custom" class="my-custom-menu">
-    <ion-header>
-      <ion-toolbar color="tertiary">
-        <ion-title>Custom Menu</ion-title>
-      </ion-toolbar>
-    </ion-header>
-    <ion-content>
-      <ion-list>
-        <ion-item>Menu Item</ion-item>
-        <ion-item>Menu Item</ion-item>
-        <ion-item>Menu Item</ion-item>
-        <ion-item>Menu Item</ion-item>
-        <ion-item>Menu Item</ion-item>
-      </ion-list>
-    </ion-content>
-  </ion-menu>
+  <!--<ion-menu side="start" menuId="custom" class="my-custom-menu">-->
+    <!--<ion-header>-->
+      <!--<ion-toolbar color="tertiary">-->
+        <!--<ion-title>Custom Menu</ion-title>-->
+      <!--</ion-toolbar>-->
+    <!--</ion-header>-->
+    <!--<ion-content>-->
+      <!--<ion-list>-->
+        <!--<ion-item>Menu Item</ion-item>-->
+        <!--<ion-item>Menu Item</ion-item>-->
+        <!--<ion-item>Menu Item</ion-item>-->
+        <!--<ion-item>Menu Item</ion-item>-->
+        <!--<ion-item>Menu Item</ion-item>-->
+      <!--</ion-list>-->
+    <!--</ion-content>-->
+  <!--</ion-menu>-->
 
   <ion-menu side="end" type="push">
     <ion-header>
-      <ion-toolbar color="danger">
-        <ion-title>End Menu</ion-title>
+      <ion-toolbar color="primary">
+        <ion-title>Menu</ion-title>
       </ion-toolbar>
     </ion-header>
     <ion-content>
       <ion-list>
-        <ion-item>Menu Item</ion-item>
-        <ion-item>Menu Item</ion-item>
-        <ion-item>Menu Item</ion-item>
-        <ion-item>Menu Item</ion-item>
-        <ion-item>Menu Item</ion-item>
+        <ion-item>
+          <ion-select  (ionChange)="changeLanguage()">
+          <ion-select-option value="en" selected="true">English</ion-select-option>
+          <ion-select-option value="es">Spanish</ion-select-option>
+          <ion-select-option value="fr">French</ion-select-option>
+        </ion-select>
+        </ion-item>
+        <!--<ion-item> <ion-button (click)="fonctionNotif()" ><p > notification</p></ion-button></ion-item>-->
+
+
+
+        <!--<ion-item><ion-button (click)="clearbadge()">clear</ion-button></ion-item>-->
+        <!--<ion-item> <ion-button (click)="getContacts()">contact</ion-button></ion-item>-->
+        <ion-item><ion-button (click)="analy()">analytics</ion-button></ion-item>
+        <ion-item>
+          <ion-toggle checked="isToggled"  (ionChange)="notify()"> </ion-toggle>
+          <ion-content>Notification ?</ion-content>
+        </ion-item>
       </ion-list>
     </ion-content>
   </ion-menu>
