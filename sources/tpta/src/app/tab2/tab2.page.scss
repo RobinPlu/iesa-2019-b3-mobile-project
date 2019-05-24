@@ -1,11 +1,22 @@
-
 ion-toolbar ion-title {
   text-align: center;
 }
-ion-toolbar ion-menu-button{
+ion-toolbar ion-menu-button {
   position: absolute;
   right: 15px;
   top: 9px;
   width: 27px;
   height: 27px;
+}
+
+.itemEx {
+  width: 100%;
+  border: 0;
+  border-radius: 6px;
+  box-shadow: 0px 4px 8px 0px rgba(0, 0, 0, 0.2);
+  margin: 24px 0px;
+}
+
+.itemEx p {
+  padding: 24px 0;
 }
