@@ -44,7 +44,7 @@
         <ion-item>
           <ion-select  (ionChange)="changeLanguage()">
           <ion-select-option value="en" selected="true">English</ion-select-option>
-          <ion-select-option value="es">Spanish</ion-select-option>
+          <!--<ion-select-option value="es">Spanish</ion-select-option>-->
           <ion-select-option value="fr">French</ion-select-option>
         </ion-select>
         </ion-item>
@@ -54,7 +54,10 @@
 
         <!--<ion-item><ion-button (click)="clearbadge()">clear</ion-button></ion-item>-->
         <!--<ion-item> <ion-button (click)="getContacts()">contact</ion-button></ion-item>-->
-        <ion-item><ion-button (click)="analy()">analytics</ion-button></ion-item>
+        <ion-item>
+          <!--<ion-button (click)="analy()">analytics</ion-button>-->
+          <ion-toggle checked="isToggled"  (ionChange)="analy()"> </ion-toggle>
+        </ion-item>
         <ion-item>
           <ion-toggle checked="isToggled"  (ionChange)="notify()"> </ion-toggle>
           <ion-content>Notification ?</ion-content>
