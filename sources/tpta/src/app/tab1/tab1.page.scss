@@ -19,3 +19,10 @@ ion-item {
   --border-radius: 6px;
   --pointer: click;
 }
+ion-toolbar ion-menu-button{
+  position: absolute;
+  right: 15px;
+  top: 9px;
+  width: 27px;
+  height: 27px;
+}

@@ -4,6 +4,7 @@ import { Camera, CameraOptions } from "@ionic-native/camera/ngx";
 import { AndroidPermissions } from "@ionic-native/android-permissions/ngx";
 import { Platform } from "@ionic/angular";
 import { Diagnostic } from "@ionic-native/diagnostic/ngx";
+import { MenuController } from '@ionic/angular';
 
 @Component({
   selector: "app-tab3",
@@ -12,13 +13,15 @@ import { Diagnostic } from "@ionic-native/diagnostic/ngx";
 })
 export class Tab3Page {
   itemToUpload = "assets/icon/favicon.png";
+    public menut: boolean =true;
 
   constructor(
     private tabName: TabNameService,
     private camera: Camera,
     private androidPermissions: AndroidPermissions,
     private _diagnostic: Diagnostic,
-    private _platform: Platform
+    private _platform: Platform,
+    private menu: MenuController
   ) {}
 
   takePhoto() {
@@ -129,4 +132,14 @@ export class Tab3Page {
     this.xp += 10;
     this.updateLevel();
   }
+    openEnd() {
+        if(this.menut === true){
+            this.menu.open('end');
+            this.menut=false;
+        }else{
+            this.menu.close('end')
+            this.menut=true;
+        }
+    }
+
 }

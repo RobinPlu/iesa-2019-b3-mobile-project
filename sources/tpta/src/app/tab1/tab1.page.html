@@ -2,23 +2,21 @@
   <ion-toolbar>
     <ion-title>
       {{ this.tabName.tab1 }}
+
     </ion-title>
-    <!--<ion-button (click)="openFirst()"></ion-button>-->
+    <ion-menu-button (click)="openEnd()" class="button button-icon button-clear ion-navicon"></ion-menu-button>
   </ion-toolbar>
 </ion-header>
 
 <ion-content padding="16px">
-  <ion-item>
-    <ion-select [(ngModel)]="language" (ionChange)="changeLanguage()">
-      <ion-select-option value="en" selected="true">English</ion-select-option>
-      <ion-select-option value="es">Spanish</ion-select-option>
-      <ion-select-option value="fr">French</ion-select-option>
-    </ion-select>
-  </ion-item>
-  <ion-button (click)="fonctionNotif()" ><p > {{ title }}</p></ion-button>
-  <ion-button (click)="clearbadge()">clear</ion-button>
-  <ion-button (click)="getContacts()">contact</ion-button>
-  <ion-button (click)="analy()">analytics</ion-button>
+  <!--<ion-item>-->
+    <!--<ion-select [(ngModel)]="language" (ionChange)="changeLanguage()">-->
+      <!--<ion-select-option value="en" selected="true">English</ion-select-option>-->
+      <!--<ion-select-option value="es">Spanish</ion-select-option>-->
+      <!--<ion-select-option value="fr">French</ion-select-option>-->
+    <!--</ion-select>-->
+  <!--</ion-item>-->
+
   <ion-item> {{ langdefault }}</ion-item>
   <!--{{contactsList | json}}-->
 
@@ -27,10 +25,10 @@
       {{ contact._objectInstance.name.givenName }} </ion-item
     >|
   </ion-list>
-  <ion-item>
-  <ion-toggle checked="isToggled"  (ionChange)="notify()"> </ion-toggle>
-    <ion-content>Notif?</ion-content>
-  </ion-item>
+  <!--<ion-item>-->
+  <!--<ion-toggle checked="isToggled"  (ionChange)="notify()"> </ion-toggle>-->
+    <!--<ion-content>Notif?</ion-content>-->
+  <!--</ion-item>-->
   <ion-item class="itemEx" (click)="example()">Bet example</ion-item>
   <ion-fab-button (click)="go()">+</ion-fab-button>
 </ion-content>

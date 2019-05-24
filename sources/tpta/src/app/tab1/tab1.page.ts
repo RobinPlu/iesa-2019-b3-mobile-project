@@ -7,8 +7,7 @@ import { NotificationService} from '../notification.service';
 import { AnalyticsService } from'../analytics.service';
 import {Badge} from '@ionic-native/badge/ngx';
 import { TranslateService } from '@ngx-translate/core';
-// import {Globalization} from '@ionic-native/globalization';
-import { Globalization } from '@ionic-native/globalization/ngx';
+import { MenuController } from '@ionic/angular';
 
 
 // import { Contacts, Contact, ContactField, ContactName } from '@ionic-native/contacts/ngx';
@@ -23,6 +22,7 @@ export class Tab1Page {
     public language: string;
     public notiftf: boolean ;
     public isToggled: boolean =true;
+    public menut: boolean =true;
 
     public langdefault : string;
   constructor(
@@ -34,7 +34,7 @@ export class Tab1Page {
     public notif: NotificationService,
     public badge: Badge,
     private _translate: TranslateService,
-    public globalization: Globalization
+    private menu: MenuController
   ) {
       this.clearbadge();
   }
@@ -139,12 +139,14 @@ clearbadge(){
 
         this._translateLanguage();
     }
-    getDeviceLanguage() {
-        this.globalization.getPreferredLanguage().then(res => {
-// Run other functions after getting device default lang
-            this._initTranslate()
-        })
-            .catch(e => this.langdefault = e);
-    }
 
+    openEnd() {
+        if(this.menut === true){
+            this.menu.open('end');
+            this.menut=false;
+        }else{
+            this.menu.close('end')
+            this.menut=true;
+        }
+    }
 }

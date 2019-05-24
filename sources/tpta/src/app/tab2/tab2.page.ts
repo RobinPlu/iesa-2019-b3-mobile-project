@@ -1,6 +1,7 @@
 import { Component, ViewChild, ElementRef } from '@angular/core';
 import { TabNameService } from './../tab-name.service';
 import { Geolocation } from '@ionic-native/geolocation/ngx';
+import { MenuController } from '@ionic/angular';
 import leaflet from 'leaflet';
 
 
@@ -10,9 +11,14 @@ import leaflet from 'leaflet';
   styleUrls: ['tab2.page.scss']
 })
 export class Tab2Page {
+
+    public menut: boolean =true;
     @ViewChild('map') mapContainer: ElementRef;
     map: any;
-    constructor(private tabName: TabNameService, private geolocation: Geolocation) {
+    constructor(private tabName: TabNameService,
+                private geolocation: Geolocation,
+                private menu: MenuController
+        ) {
     }
 
     ionViewDidEnter() {
@@ -69,5 +75,13 @@ export class Tab2Page {
             console.log('Error getting location', error);
         });
     }
-
+    openEnd() {
+        if(this.menut === true){
+            this.menu.open('end');
+            this.menut=false;
+        }else{
+            this.menu.close('end')
+            this.menut=true;
+        }
+    }
 }
