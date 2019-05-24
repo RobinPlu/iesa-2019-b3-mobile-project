@@ -46,8 +46,11 @@ export class AppComponent {
 
         this.badge.set(0);
         this.badge.clear();
-        this.screenOrientation.lock(this.screenOrientation.ORIENTATIONS.PORTRAIT);
-
+        // this.screenOrientation.lock(this.screenOrientation.ORIENTATIONS.PORTRAIT);
+        this.screenOrientation.onChange().subscribe(
+            () => {
+                alert("Orientation Changed");
+            });
     });
   }
 }
