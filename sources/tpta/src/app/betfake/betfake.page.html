@@ -1,22 +1,25 @@
-<ion-header>
-  <ion-toolbar>
+<ion-header color="primary">
+  <ion-toolbar color="primary">
     <ion-back-button routerLink="/"> </ion-back-button>
     <ion-title>Baptiste vs Cedric</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
-  <ion-title>102€ sur la table</ion-title>
+  <ion-title class="ion-title">102€ sur la table</ion-title>
+
   <div padding>
     <p>bataille</p>
   </div>
-  <div padding>
-    <p>Joueur 1 :</p>
-    <h3>Baptiste</h3>
-  </div>
-  <div padding>
-    <p>Joueur 2 :</p>
-    <h3>Cédric</h3>
+  <div class="contain">
+    <div padding>
+      <p>Joueur 1</p>
+      <h3>Baptiste</h3>
+    </div>
+    <div padding>
+      <p>Joueur 2</p>
+      <h3>Cédric</h3>
+    </div>
   </div>
   <ion-row padding class="audio">
     <ion-col>
@@ -48,6 +51,6 @@
     <!--</ion-list>-->
   </ion-row>
   <div [style.opacity]="opacity" id="map" style="width:100%; height:100%;">
-    <ion-button (click)="close()">Locate</ion-button>
+    <ion-button (click)="close()" class="close">Close</ion-button>
   </div>
 </ion-content>

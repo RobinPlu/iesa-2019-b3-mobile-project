@@ -1,6 +1,28 @@
-ion-title {
-  padding-top: 1rem;
+.ion-title {
+  font-size: 2rem;
+  text-align: center;
+  padding: 0.5rem;
+  border-radius: 16px;
+  background-color: #f1f1f1;
+  display: block;
+  width: 280px;
+  margin: 2rem auto;
 }
 .audio {
   margin-top: 3rem;
+}
+.close {
+  position: absolute;
+  right: 0;
+  z-index: 999;
+}
+
+.contain {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+ion-toolbar ion-title {
+  text-align: center;
 }

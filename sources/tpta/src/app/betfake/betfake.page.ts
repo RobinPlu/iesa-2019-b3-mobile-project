@@ -114,6 +114,9 @@ export class BetfakePage implements OnInit {
 
   close() {
     this.opacity = 0;
+    this.map.remove();
+    
+
   }
   ngOnInit() {}
 }

@@ -2,3 +2,7 @@ ion-toolbar {
   display: flex !important;
   flex-direction: row !important;
 }
+
+ion-toolbar ion-title {
+  text-align: center;
+}

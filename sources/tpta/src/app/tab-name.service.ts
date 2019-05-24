@@ -4,7 +4,7 @@ import { Injectable } from '@angular/core';
     providedIn: 'root'
 })
 export class TabNameService {
-    public tab1 = "accueil";
-    public tab2 = "notification";
-    public tab3 = "profil";
+    public tab1 = "Accueil";
+    public tab2 = "Notifications";
+    public tab3 = "Profil";
 }

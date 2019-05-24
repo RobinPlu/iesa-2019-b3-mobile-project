@@ -19,3 +19,13 @@ ion-item {
   --border-radius: 6px;
   --pointer: click;
 }
+
+ion-fab-button {
+  position: absolute;
+  bottom: 1rem;
+  margin: auto;
+}
+
+ion-toolbar ion-title {
+  text-align: center;
+}
